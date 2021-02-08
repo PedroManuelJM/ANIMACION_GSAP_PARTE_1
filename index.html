@@ -1,0 +1,218 @@
+<html>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!--bootstrap -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<!-- GSAP -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
+<!-- jquery -->
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<!-- Font Icons-->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
+<!-- styles -->
+<link rel="stylesheet" href="css/styles.css">
+
+
+
+<body>
+    <nav class="navbar navbar-light bg-dark">
+        <a class="navbar-brand text-white" href="#">
+            <img id="logo" src="img/gsap.png" width="30" height="30" class="d-inline-block align-top" alt="">
+            Animación con GSAP <span class="badge bg-success">Parte 1</span>
+        </a>
+    </nav>
+    <section id="content">
+        <div class="container text-center">
+            <div class="row">
+                <div class="form-group col-6">
+                    <label for="exampleFormControlTextarea1 "> <span class="badge bg-info text-white"> Código
+                        </span></label>
+                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="5" disabled>tl.from('#imagen', {
+                        duration: 2,
+                        x: 300,
+                        backgroundColor: 'red',
+                        borderRadius: '20%',
+                        border: '5px solid blue',
+                        ease: 'linear'
+                    });
+                    </textarea>
+                </div>
+                <div class="col-6">
+                    <span class="badge bg-warning">Efecto lineal</span>
+                    <br><br>
+                    <img id="imagen" src="img/objetivo.png">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="content">
+        <div class="container text-center">
+            <div class="row">
+                <div class="form-group col-6">
+                    <label for="exampleFormControlTextarea1 "> <span class="badge bg-info text-white"> Código
+                        </span></label>
+                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="5" disabled>tl.from('#imagen1', {
+                        duration: 2,
+                        x: 300,
+                        backgroundColor: 'red',
+                        borderRadius: '20%',
+                        border: '5px solid blue',
+                        ease: 'elastic'
+                    });
+                    </textarea>
+                </div>
+                <div class="col-6">
+                    <span class="badge bg-success">Efecto elastic</span>
+                    <br><br>
+                    <img id="imagen1" src="img/objetivo.png">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="content">
+        <div class="container text-center">
+            <div class="row">
+                <div class="form-group col-6">
+                    <label for="exampleFormControlTextarea1 "> <span class="badge bg-info text-white"> Código
+                        </span></label>
+                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="5" disabled>tl.from('#imagen2', {
+                        duration: 2,
+                        x: 300,
+                        backgroundColor: 'red',
+                        borderRadius: '20%',
+                        border: '5px solid blue',
+                        ease: 'bounce'
+                    });
+                    </textarea>
+                </div>
+
+                <div class="col-6">
+                    <span class="badge bg-danger">Efecto bounce</span>
+                    <br><br>
+                    <img id="imagen2" src="img/objetivo.png">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="content">
+        <div class="container text-center">
+            <div class="row">
+                <div class="form-group col-6">
+                    <label for="exampleFormControlTextarea1 "> <span class="badge bg-info text-white"> Código
+                        </span></label>
+                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="5" disabled>tl.from('#rotacion', {
+                        duration: 2,
+                        rotate:360, // rotación 
+                    });
+                    </textarea>
+                </div>
+
+                <div class="col-6">
+                    <span class="badge bg-dark text-white">Rotación </span>
+                    <br><br>
+                    <img id="rotacion" src="img/gsap.png">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="content-medium">
+        <div class="container text-center">
+            <div class="row">
+                <div class="form-group col-6">
+                    <label for="exampleFormControlTextarea1 "> <span class="badge bg-info text-white"> Código
+                        </span></label>
+                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="10" disabled>let t2 = gsap.timeline({ repeat: -1, repeatDelay: 1 }); //repitira infinitamente
+                        t2.from('#primero', {
+                            duration: 2,
+                            rotate:360,
+                         }); 
+                        
+                        t2.from( '.circle',{
+                            duration:.2, // tiempo de duracion 
+                            scale:0,
+                            stagger:.5
+                        },'+=1'); // lapso de espera  para que luego continue                         
+                    </textarea>
+                </div>
+
+                <div class="col-6">
+                    <span class="badge bg-secondary text-white">Animación continua </span>
+                    <br><br>
+                    <img id="primero" src="img/gsap.png">
+                    <span class="circle badge badge-pill align-middle">H</span>
+                    <span class="circle badge badge-pill align-middle">O</span>
+                    <span class="circle badge badge-pill align-middle">L</span>
+                    <span class="circle badge badge-pill align-middle">A</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="content-medium">
+        <div class="container text-center">
+            <div class="row">
+                <div class="form-group col-6">
+                    <label for="exampleFormControlTextarea1 "> <span class="badge bg-info text-white"> Código
+                        </span></label>
+                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="10" disabled>let t3 = gsap.timeline({ repeat: 4, yoyo:true }); // solo repitira 4 veces
+                        t3.from('#yo', {
+                            duration: 2,
+                            rotate:360,
+                         }); 
+                        
+                        t3.from( '.circle1',{
+                            duration:.2, // tiempo de duracion 
+                            scale:0,
+                            stagger:.5
+                        }); // lapso de espera  para que luego continue 
+                    </textarea>
+                </div>
+
+                <div class="col-6">
+                    <span class="badge bg-info text-white">Animación YOYO </span>
+                    <br><br>
+                    <img id="yo" src="img/gsap.png">
+                    <span class="circle1 badge badge-pill align-middle">H</span>
+                    <span class="circle1 badge badge-pill align-middle">O</span>
+                    <span class="circle1 badge badge-pill align-middle">L</span>
+                    <span class="circle1 badge badge-pill align-middle">A</span>
+                </div>
+            </div>
+        </div>
+    </section>
+    <br>
+    <footer id="footer" class="bg-dark">
+        <div class="container-fluid padding">
+            <div class="container">
+                <div class="col-12  text-center social">
+                    <a class="" href="https://github.com/PedroManuelJM" target="_blank"><i
+                            class="fab fa-github"></i></a>
+                </div>
+            </div>
+            <div class="container text-center">
+                <p class="text-white"> Mi página Web
+                    <a href="https://pedrojuradomoreno-43dfd.web.app/" target="_blank" class="text-white"
+                        style="text-decoration:none">PedroManuelJM <img src="img/link-website.png"
+                            style="width: 32px;"></a>
+                    <br>
+                    <script type="text/javascript">
+                        var d = new Date()
+                        document.write(d.getFullYear())
+                    </script>
+                </p>
+
+            </div>
+        </div>
+    </footer>
+    <script src="js/script.js"></script>
+</body>
+</html>

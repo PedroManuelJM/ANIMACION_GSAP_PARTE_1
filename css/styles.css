@@ -1,0 +1,65 @@
+#content {
+    margin-top: 20px;
+    height: 180px;
+}
+#content-medium {
+    margin-top: 20px;
+    height: 280px;
+}
+#rotacion{
+    width: 64px;
+}
+#primero{
+    width: 64px;
+}
+#yo{
+    width: 64px;
+}
+.circle {
+    display: inline-block;
+    border-radius: 50%;
+    font-size: 22px;
+}
+
+.circle:nth-of-type(2) {
+    background: red;
+}
+
+.circle:nth-of-type(3) {
+    background: yellow;
+}
+.circle:nth-of-type(4) {
+    background: rgb(4, 228, 90);
+}
+.circle:nth-of-type(5) {
+    background: orange;
+}
+
+.circle1 {
+    display: inline-block;
+    border-radius: 50%;
+    font-size: 22px;
+}
+
+.circle1:nth-of-type(2) {
+    background: red;
+}
+
+.circle1:nth-of-type(3) {
+    background: yellow;
+}
+.circle1:nth-of-type(4) {
+    background: rgb(4, 228, 90);
+}
+.circle1:nth-of-type(5) {
+    background: orange;
+}
+
+#footer{
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.fa-github{
+  color: white;
+  font-size: 32px;
+}
